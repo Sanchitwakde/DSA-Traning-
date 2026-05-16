@@ -1,0 +1,24 @@
+time complexity depends on time taken to run the program ( the less the better )
+space complexity depends on how much space the program has taken ( the less the better )
+
+why data struccture is important ?
+
+time is more important in than space complexity 
+
+O(n) - linear time ( visiting each and every element ) 
+
+
+Space compexity depends on the more input the more memory it takes 
+
+BigO notation is the language and metric used to describe the efficiency of the algo 
+O(N), O(n*n)(quadratic time), O(2n)( exponential time)
+
+
+representation
+best case - omega 
+average case - big theta 
+worst case - Omicron (O)
+
+o(1)- constant time 
+o(log n) -logarithmic time 
+
