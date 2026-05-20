@@ -10,3 +10,4 @@ if __name__ == '__main__':
     n=10
     for x in range(n):
         print(fibo(x),end=" ")
+       
