@@ -71,6 +71,7 @@ class LinkedList:
                 ptr.next=newnode
                 newnode.next = ptr1
                 print(data," is added")
+                
     def delete_begin(self):
         if self.head==None:
             print("List is empty")

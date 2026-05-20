@@ -1,3 +1,5 @@
+# find mix and max 
+
 import sys
 class getnode:
     def __init__(self):

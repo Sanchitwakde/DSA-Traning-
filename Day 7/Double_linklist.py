@@ -71,7 +71,13 @@ class Linkedlist:
 
     def deletebegin(self):
         if self.head is None:
-         pass
+         print("List not exist")
+        else:
+            ptr = self.head
+            ptr1 = ptr.right
+            # ptr1.left = None
+            self.head = ptr1
+            print("Begin Node deleted")
 
 
 if __name__ == '__main__':
@@ -97,6 +103,9 @@ if __name__ == '__main__':
             obj.traverse()
         elif n==4:
             obj.addbetween()
+            obj.traverse()
+        elif n==5:
+            obj.deletebegin()
             obj.traverse()
         elif n==0:
             sys.exit(0)
