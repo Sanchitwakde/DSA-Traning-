@@ -6,6 +6,6 @@ def sum(n):
     else:
         return n +sum(n-1)
 if __name__ == '__main__':
-    n= 99
+    n = 99
     res = sum(n)
     print(res)
