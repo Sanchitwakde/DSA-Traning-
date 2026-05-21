@@ -65,18 +65,20 @@ class Graph:
                 print(self.graph[i][j],end = " ")
             print()
 
-    def deletegraph(self,v):
+    def deletegraph(self, v):
         if v not in self.nodes:
-            print(v,"not present")
+            print(v, "not present")
         else:
             index1 = self.nodes.index(v)
-            nodecount -=1
-            
+
+            self.nodecount -= 1
             self.nodes.pop(index1)
-            self.nodes.pop(index1)
+            self.graph.pop(index1)
+
             for x in self.graph:
                 x.pop(index1)
-            print(v,"is deleted")
+
+            print(v, "is deleted")
 
 if __name__ == '__main__':
     obj = Graph()
