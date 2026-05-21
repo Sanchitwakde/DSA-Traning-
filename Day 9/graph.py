@@ -33,20 +33,49 @@ class Graph:
         self.graph[index1][index2]=1
         self.graph[index2][index1]=1
 
-    def addedge_undirected_weighted():
-        pass
-    def addedge_directed_weighted():
-        pass
+    def addedge_undirected_weighted(self,v1,v2,weight):
+        if v1 not in self.nodes:
+            print(v1, "not present")
+            return
+        if v2 not in self.nodes:
+            print(v2,"not present")
+            return
+        index1= self.nodes.index(v1)
+        index2 = self.nodes.index(v2)
+        self.graph[index1][index2]=weight
+        self.graph[index1][index2]=weight
+
+
+    def addedge_directed_weighted(self,v1,v2,weight):
+        if v1 not in self.nodes:
+            print(v1, "not present")
+            return
+        if v2 not in self.nodes:
+            print(v2, "not present")
+            return
+        index1 = self.nodes.index(v1)
+        index2 = self.nodes.index(v1)
+        self.graph[index1][index2]=weight
+
     def printgraph(self):
         print(" ",*self.nodes)
         for i in range(self.nodecount):
-            print(self.nodes[i]," ")
+            print(self.nodes[i],end =" ")
             for j in range(self.nodecount):
                 print(self.graph[i][j],end = " ")
             print()
 
-    def deletegraph():
-        pass
+    def deletegraph(self,v):
+        if v not in self.nodes:
+            print(v,"not present")
+        else:
+            nodecount -=1
+            index1 = self.nodes.index(v)
+            self.nodes.pop(index1)
+            self.nodes.pop(index1)
+            for x in self.graph:
+                x.pop(index1)
+            print(v,"is deleted")
 
 if __name__ == '__main__':
     obj = Graph()
@@ -63,16 +92,21 @@ if __name__ == '__main__':
             v = input("Enter vertex: ")
             obj.addnode(v)
         elif n==2:
-            v1=input("Enter Vertex 1")
-            v2 = input("Enter Vertex 2")
+            v1=input("Enter Vertex 1: ")
+            v2 = input("Enter Vertex 2: ")
             obj.addedge_undirected_unweighted(v1,v2)
         elif n==3:
-            obj.addedge_undirected_weighted()
+            v1=input("Enter Vertex 1:")
+            v2 = input("Enter Vertex 2:")
+            obj.addedge_undirected_weighted(v1,v2)
         elif n==4:
-            obj.addedge_directed_weighted()
+            v1=input("Enter Vertex 1:")
+            v2 = input("Enter Vertex 2:")
+            obj.addedge_directed_weighted(v1,v2)
         elif n==5:
             obj.printgraph()
         elif n==6:
+
             obj.deletegraph()
         elif n==0:
             sys.exit(0)
