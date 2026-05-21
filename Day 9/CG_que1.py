@@ -29,3 +29,23 @@
 # . Maximum mark in 3 semester:89
 
 
+snum = int(input("Enter number of Sem: "))
+sub = 0
+marks = 0
+marks_max = 0
+for i in range(snum): 
+    sub = int(input(f"Enter number of subject in Sem {i+1}:"))
+    maxi = []
+
+    for n in range(sub):
+        marks = int(input(f"Enter marks obtained in Sem {i+1}:"))
+
+        if marks < 0 or marks > 100:
+            print("You have entered invalid mark.")
+        else:
+            maxi.append(marks)
+
+    marks_max = max(maxi)
+    print(f"Maximum marks in semester {i+1}:",marks_max)
+
+
