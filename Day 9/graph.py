@@ -69,8 +69,9 @@ class Graph:
         if v not in self.nodes:
             print(v,"not present")
         else:
-            nodecount -=1
             index1 = self.nodes.index(v)
+            nodecount -=1
+            
             self.nodes.pop(index1)
             self.nodes.pop(index1)
             for x in self.graph:
@@ -106,7 +107,7 @@ if __name__ == '__main__':
         elif n==5:
             obj.printgraph()
         elif n==6:
-
-            obj.deletegraph()
+            v = input("Enter vertex to delete: ")
+            obj.deletegraph(v)
         elif n==0:
             sys.exit(0)
