@@ -22,9 +22,9 @@ def generate_permutations(a,b):
     num = str(a)
     perm = set(permutations(num)) # so that there are no duplicates 
     res = []
-    for i in perm:
-        nums = int("".join(i))
-        if nums>b:
+    for i in perm:  
+        nums = int("".join(i))  # permutation gives tuples that are single single string to join 
+        if nums>b:                       # -join- is used and convert it to int to compare with b 
             res.append(nums)
 
     if len(res) == 0:
