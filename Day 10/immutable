@@ -1,0 +1,3 @@
+#immutable 
+    immutability means no chnage in same memory
+    if values are same of the 2 different variable it will stil store it in same memory 
